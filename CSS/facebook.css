@@ -1,0 +1,356 @@
+/* Start Global Ruls */
+*{
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color:var(--primary-clr) ;
+}
+:root{
+    --main-blue: #1877F2;
+    --primary-clr:#EFEFEF ;
+    --secondary-clr:#FFFFFF ;
+    --txt-clr: #252525 ;
+}
+.container{
+    padding-left: 15px ;
+    padding-right: 15px;
+}
+.clear_flot{
+    clear: both;
+}
+
+/* End Global Ruls */
+/* Start Media */
+@media (max-width:767px) {
+    .container{
+        padding-left: 15px ;
+        padding-right: 15px;
+    }
+}
+@media (min-width:768px) {
+    .container{
+        width: calc(100% - 30px);
+        padding-left: 15px ;
+        padding-right: 15px;
+    }
+}
+@media (min-width:991px) {
+    .container{
+        width: calc(100% - 30px);
+        padding-left: 15px ;
+        padding-right: 15px;
+    }
+}
+@media (min-width:1200px) {
+    .container{
+        width: calc(100% - 30px);
+        padding-left: 15px ;
+        padding-right: 15px;
+    }
+}
+/* End Media */
+/* header */
+header{
+    position: relative;
+    background-color: var(--secondary-clr);
+}
+header .container{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 73px;
+}
+header .nav-content1{
+    
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 25px;
+}
+header .nav-content1 .logo{
+    height: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .nav-content1 .logo a{
+    text-decoration: none;
+    text-decoration-color: none;
+    text-decoration-color: none;
+}
+header .nav-content1 .logo a> i{
+    font-size: 50px;
+    color:#385898;
+}
+header .container form.search-filled{
+    position: relative;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .container form.search-filled input[type="search"]{
+    position: relative;
+    height: 60%;
+    padding-right: 20%;
+    text-align: end;
+    background-color: var(--primary-clr);
+    outline: 2px solid #FCFCFC;
+    border: 2px solid #ECECEC;
+    border-radius: 85px;
+    -webkit-border-radius: 85px;
+    -moz-border-radius: 85px;
+    -ms-border-radius: 85px;
+    -o-border-radius: 85px;
+}
+header .container form.search-filled .search_ico{
+    position: relative;
+    font-size: 20px;
+    color: #777;
+    right: 20%;
+    z-index: 10;
+}
+header .container nav.links{
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 73px;
+}
+header .container nav.links .main_navgation{
+    display: flex;
+    height: 73px;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+header .container nav.links .main_navgation ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header .container nav.links .main_navgation ul > li >a{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    text-decoration-color: none;
+    -moz-text-decoration-color: none;
+}
+header .container nav.links .main_navgation ul > li >a.active i{
+    color: var(--main-blue);
+    
+}
+header .container nav.links .main_navgation ul > li >a.active i::after{
+    content:"" ;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-blue);
+}
+header .container nav.links .main_navgation ul > li >a:last-child{
+    margin-right: 35px;
+}
+header .container nav.links .main_navgation ul > li >a >i {
+    font-size: 30px;
+    color: #1F1D36;
+}
+header .container nav.links .main_navgation ul > li >:hover{
+    background-color: var(--primary-clr);
+    border-radius: 15px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+header .container nav.links .second-navgation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 73px;
+    
+}
+header .container nav.links .second-navgation ul{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+header .container nav.links .second-navgation ul > li > a{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    z-index: 1;
+    text-decoration-color: none;
+    -moz-text-decoration-color: none;
+}
+header .container nav.links .second-navgation ul > li:first-child >div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 65%;
+}
+header .container nav.links .second-navgation ul > li:first-child >div h5{
+    font-size: 18px;
+    padding: 0 10px;
+}
+header .container nav.links .second-navgation ul > li >div > a:first-child img{
+    max-width: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+header .container nav.links .second-navgation ul > li > a > i{
+
+    font-size: 30px;
+    color: #1F1D36;
+}
+header .container nav.links .second-navgation ul > li > a::before{
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-clr);
+    z-index: -1;
+    transform: translate(-50% , -50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+}
+
+/* header */
+/* side MEnu */
+aside {
+    float: right;
+    width: calc( 100% / 4 );
+    background-color:var(--primary-clr);
+    display: flex;
+    flex-direction: column;
+}
+aside ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+aside ul li{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    
+}
+aside ul li a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    color: var(--txt-clr);
+
+}
+aside ul li:first-child a >img{
+    margin: auto -10px;
+    max-width: 20%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+aside ul li a > i{
+    position: relative;
+    top: -20px;
+    right: 0;
+    font-size: 35px;
+}
+aside ul li a > i::before{
+    content: "";
+    background-color: #C4C4C4;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45%;
+    right: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+aside ul li a h3{
+    margin: 0;
+    margin-right: 15px;
+}
+aside ul li:last-child a h3{
+    margin: auto 50px;
+}
+aside ul li a p{
+    position: relative;
+    margin: 0;
+    margin: auto 33px;
+    color: var(--main-blue);
+}
+aside ul li a p::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-blue);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+aside ul li a >div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+aside ul li a > div >h3{
+    padding: 5px 5px;
+}
+aside ul li a > div >p{
+    
+}
+aside ul li a h3{
+    
+}
+
+/* side MEnu */
