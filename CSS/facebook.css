@@ -10,7 +10,8 @@ body{
     --main-blue: #1877F2;
     --primary-clr:#EFEFEF ;
     --secondary-clr:#FFFFFF ;
-    --txt-clr: #252525 ;
+    --txt-clr: #050505 ;
+    --secondary-txt-clr: #65676b ;
 }
 .container{
     padding-left: 15px ;
@@ -88,10 +89,10 @@ header .nav-content1 .logo a> i{
 header .container form.search-filled{
     position: relative;
     display: flex;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
+
 header .container form.search-filled input[type="search"]{
     position: relative;
     height: 60%;
@@ -106,12 +107,34 @@ header .container form.search-filled input[type="search"]{
     -ms-border-radius: 85px;
     -o-border-radius: 85px;
 }
+@media (max-width:768px) {
+    header .container form.search-filled input[type="search"]::placeholder{
+        opacity: 0;
+    }
+    header .container form.search-filled input[type="search"]{
+        max-width: 55px;
+    }
+
+    
+}
 header .container form.search-filled .search_ico{
-    position: relative;
+    position: absolute;
     font-size: 20px;
     color: #777;
-    right: 20%;
+    right: 1%;
     z-index: 10;
+}
+@media (max-width:768px) {
+    header .container form.search-filled .search_ico{
+        position: absolute !important;
+        right: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(50%, -50%);
+        -moz-transform: translate(50%, -50%);
+        -ms-transform: translate(50%, -50%);
+        -o-transform: translate(50%, -50%);
+}
 }
 header .container nav.links{
     list-style: none;
@@ -128,12 +151,20 @@ header .container nav.links .main_navgation{
     align-items: center;
     flex: 1;
 }
+@media(max-width:992px){
+    header .container nav.links .main_navgation{
+        display: none;
+    
+    }
+
+}
 header .container nav.links .main_navgation ul{
     list-style: none;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
+
 }
 header .container nav.links .main_navgation ul > li >a{
     position: relative;
@@ -175,6 +206,24 @@ header .container nav.links .main_navgation ul > li >:hover{
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+}
+header .container nav.links i.menu_bar{
+    color: #1F1D36;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width:860px) {
+    header .container nav.links i.menu_bar{
+        margin-right: 30px;
+    }
+    
+}
+@media(max-width:992px){
+    header .container nav.links i.menu_bar{
+        display: flex;
+    }
+
 }
 header .container nav.links .second-navgation{
     display: flex;
@@ -347,10 +396,81 @@ aside ul li a > div >h3{
     padding: 5px 5px;
 }
 aside ul li a > div >p{
-    
+    font-size: 12px;
 }
-aside ul li a h3{
-    
+.aside2{
+    position: relative;
+    max-width: 320px;
+    margin: auto 40px;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+.aside2 .main_menu{
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+
+}
+.aside2 .main_menu h2{
+    display: inline-block;
+    font-size: 18px;
+    margin: 0;
+    color: var(--secondary-txt-clr);
+}
+.aside2 .main_menu i.video_call {
+    cursor: pointer;
+    color: var(--secondary-txt-clr);
+}
+.aside2 .main_menu i.search_friend{
+    cursor: pointer;
+    color: var(--secondary-txt-clr);
+}
+.aside2 .main_menu i.more{
+    cursor: pointer;
+    color: var(--secondary-txt-clr);
 }
 
+.aside2 .friend_list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5px;
+    color: var(--txt-clr);
+}
+.aside2 .friend_list::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: var(--secondary-txt-clr);
+    width: 100%;
+    height: 5px;
+    
+}
+.aside2 .friend_list .picture_and_name{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.aside2 .friend_list .picture_and_name img{
+    width: 35%;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.aside2 .friend_list .picture_and_name h4{
+    cursor: pointer;
+    margin-right: 25px;
+    color: var(--secondary-txt-clr);
+}
 /* side MEnu */
