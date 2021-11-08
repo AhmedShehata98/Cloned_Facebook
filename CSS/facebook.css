@@ -546,7 +546,8 @@ aside ul li a > div >p{
 /* side MEnu */
 /* main content */
 section{
-    min-height: 60vh;
+    max-height: 90vh;
+    overflow-y: scroll;
     padding-top: 25px;
     padding-bottom: 25px;
     position: absolute;
@@ -566,14 +567,12 @@ section .container{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 60vh;
-
+    margin: auto;
 }
 
 section .container .feed_content{
     max-width: 700px;
-    max-height: 50% ;
-    background-color: var(--secondary-clr);
+    max-height: 100% ;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -586,7 +585,8 @@ section .container .feed_content .content_box{
     justify-content: center;
     align-items: flex-end;
     padding: 15px;
-
+    margin: 30px auto;
+    background-color: var(--secondary-clr);
 }
 section .container .feed_content .content_box .header_box{
     display: flex;
@@ -652,15 +652,22 @@ section .container .feed_content .content_box .write_content{
 section .container .feed_content .content_box .images_content{
     position: relative;
     display: flex;
-    gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
 }
-section .container .feed_content .content_box .images_content >:nth-child(1){
+section .container .feed_content .content_box .images_content img{
+    max-width: 48%;
+}
+/* section .container .feed_content .content_box .images_content >:nth-child(1){
     max-width: 50%;
 }
 section .container .feed_content .content_box .images_content >:nth-child(2){
     
     max-width: 50%;
-}
+} */
 section .container .feed_content .content_box .react_and_Cont{
     display: flex;
     width: 100%;
