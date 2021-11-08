@@ -301,6 +301,11 @@ aside {
     display: flex;
     flex-direction: column;
 }
+@media (max-width:992px) {
+    aside{
+        display: none;
+    }
+}
 aside ul{
     display: flex;
     flex-direction: column;
@@ -403,6 +408,11 @@ aside ul li a > div >p{
     max-width: 320px;
     max-height: 90vh;
     overflow-y: scroll;
+}
+@media (max-width:1382px) {
+    .aside2{
+        display: none;
+    }
 }
 .aside2 .main_menu{
 
@@ -542,6 +552,14 @@ section{
     position: absolute;
     top: 10%;
     right: calc(100% /4);
+}
+@media (max-width:992px) {
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: unset;
+    }
 }
 section .container{
     position: relative;
